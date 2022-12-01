@@ -1,4 +1,4 @@
-﻿#Read the calories in a from a file
+#Read the calories in a from a file
 $elfCal = gc .\AOCD1.txt
 
 #Initialize variables in a scope that can be used/ won't be interferred with
@@ -33,5 +33,5 @@ foreach($elf in $elfTotCal){
     }
 }
 
-#Print the total of the top 3 amount of elfs
+#Print the total amount of calories carried by the three elfs with the most calories
 $mostCal+$secondMostCal+$thirdMostCal
