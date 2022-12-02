@@ -1,12 +1,11 @@
 def rockPaperScissors():
-
+    
+    #read file in and set score to 0
     fileInfo = open("AOC22D2P1.txt", 'r')
-    #rPSLines = fileInfo.readline()
-    #print(fileInfo.read())
     score = 0
+    
+    #increments the value of the score for how many points were earned
     for line in fileInfo:
-        #print(line)
-
         match line:
             case "A X\n":
                 score += 4
@@ -30,7 +29,5 @@ def rockPaperScissors():
                 print(line)
 
     print(score)
-
-
 
 rockPaperScissors()
