@@ -1,6 +1,6 @@
 def rockPaperScissors():
     # read file in and set score to 0
-    fileInfo = open("AOC22D2P1.txt", 'r')
+    fileInfo = open("AOC22D2P2.txt", 'r')
     score = 0
 
     # increments the value of the score for how many points were earned
