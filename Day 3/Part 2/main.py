@@ -1,10 +1,10 @@
 def ruckSacks():
     # read file in and set sum of priorities to 0
-    fileInfo = open("AOC22D3P1.txt", 'r')
+    fileInfo = open("AOC22D3P2.txt", 'r')
     totPriority = 0
     elfNum = 1
 
-    # increments the value of the score for how many points were earned
+    # goes through each line of the file, assign every 3 lines to line1, line2, and line 3
     for line in fileInfo:
         found= False
         if(elfNum == 1):
@@ -17,9 +17,10 @@ def ruckSacks():
             line3 = line
             elfNum = 1
 
+            # itterates through each letter in the first line, finds the matching letter for all three lines
             for letter in line1:
-                if(letter in line2 and letter in line3 and not found):
-                    #print(letter, line1,line2,line3)
+                if( not found and letter in line2 and letter in line3):
+                    # adds the priority number to the total
                     if (ord(letter) < 91):
                         totPriority += ord(letter) - 38
                         found=True
@@ -29,50 +30,6 @@ def ruckSacks():
                         found=True
 
     print(totPriority)
-"""
-        found = False
-        for letter in firstPouch:
-
-            if(letter in secondPouch and not found):
-                if(ord(letter) < 91):
-                    found = True
-                    totPriority += ord(letter)-38
-
-                if (ord(letter) > 91):
-                    found = True
-                    totPriority += ord(letter) - 96
-"""
-
-
-
 
 
 ruckSacks()
-"""
-def ruckSacks():
-    # read file in and set sum of priorities to 0
-    fileInfo = open("AOC22D3P1.txt", 'r')
-    totPriority = 0
-
-    # increments the value of the score for how many points were earned
-    for line in fileInfo:
-        firstPouch = line[:len(line)//2]
-        secondPouch = line[len(line)//2:]
-        found = False
-        for letter in firstPouch:
-
-            if(letter in secondPouch and not found):
-                if(ord(letter) < 91):
-                    found = True
-                    totPriority += ord(letter)-38
-
-                if (ord(letter) > 91):
-                    found = True
-                    totPriority += ord(letter) - 96
-
-
-    print(totPriority)
-
-
-
-"""
