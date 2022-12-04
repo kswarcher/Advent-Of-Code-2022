@@ -1,6 +1,6 @@
 def assignmentPairs():
     # read file in and set number of assignements contained to 0
-    fileInfo = open("AOC22D4P1.txt", 'r')
+    fileInfo = open("AOC22D4P2.txt", 'r')
     assignmentsContained = 0
 
     # goes through the each line of the file, gets the numbers in each line, and finds if the ranges overlap
