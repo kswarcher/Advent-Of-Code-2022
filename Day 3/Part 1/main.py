@@ -11,7 +11,7 @@ def ruckSacks():
         for letter in firstPouch:
 
             # if the letter has not been found it adds the priority of the letter (item) to the total priority
-            if(letter in secondPouch and not found):
+            if(not found and letter in secondPouch):
                 if(ord(letter) < 91):
                     found = True
                     totPriority += ord(letter)-38
